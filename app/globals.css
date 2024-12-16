@@ -3,15 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: #fff;
-  --foreground: #111;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #111;
-    --foreground: #fff;
-  }
+  --background: #111;
+  --foreground: #fff;
+  color-scheme: dark;
 }
 
 body {
@@ -24,25 +18,18 @@ body {
 
 .text-stroke {
   -webkit-text-stroke: 1px var(--foreground);
-  /* Stroke width and color */
   color: transparent;
-  /* Makes the inner text color invisible */
 }
 
 .text-stroke-black {
   -webkit-text-stroke: 1px var(--background);
-  /* Stroke width and color */
   color: transparent;
-  /* Makes the inner text color invisible */
 }
 
-/* Custom Selection Styling */
 .text-stroke::selection,
 .text-stroke-black::selection {
   color: var(--foreground);
-  /* Keep text fill hidden */
   -webkit-text-stroke: 1px var(--foreground);
-  /* Maintain stroke during selection */
 }
 
 .child:nth-of-type(1) {
